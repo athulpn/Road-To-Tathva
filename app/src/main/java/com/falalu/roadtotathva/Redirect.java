@@ -35,14 +35,14 @@ public class Redirect extends ActionBarActivity {
         currlevel = sharedPreferences.getInt("levelcurr",0);
         nextlevel = (TextView)findViewById(R.id.nextlevel);
         nextlevel.setText("Next Level: "+Integer.toString(currlevel+1));
-        if(currlevel == 3 || currlevel == 2 || currlevel == 1) {
+        if(currlevel == 3 || currlevel == 2 || currlevel == 1 || currlevel== 4 || currlevel == 5) {
             for (int i = 1; i <= 6; i++) {
                 Boolean temp = sharedPreferences.getBoolean(Integer.toString(i), false);
                 if (temp == false)
                     questionleft.add(Integer.toString(i));
             }
             Intent intent;
-            if (questionleft.size() > 2) {
+            if (questionleft.size() > 0) {
                 Random randomGenerator = new Random();
                 int ind = randomGenerator.nextInt(questionleft.size());
                 int choosen = Integer.parseInt(questionleft.get(ind));
@@ -95,14 +95,14 @@ public class Redirect extends ActionBarActivity {
                 startActivity(intent);
                 finish();
             }
-        }else if(currlevel == 4){
+        }else if(currlevel == 6){
             for (int i = 7; i <= 12; i++) {
                 Boolean temp = sharedPreferences.getBoolean(Integer.toString(i), false);
                 if (temp == false)
                     questionleft.add(Integer.toString(i));
             }
             Intent intent;
-            if (questionleft.size() > 1) {
+            if (questionleft.size() > 0) {
                 Random randomGenerator = new Random();
                 int ind = randomGenerator.nextInt(questionleft.size());
                 int choosen = Integer.parseInt(questionleft.get(ind));
@@ -169,7 +169,7 @@ public class Redirect extends ActionBarActivity {
                     questionleft.add(Integer.toString(i));
             }
             Intent intent;
-            if (questionleft.size() > 2) {
+            if (questionleft.size() > 0) {
                 Random randomGenerator = new Random();
                 int ind = randomGenerator.nextInt(questionleft.size());
                 int choosen = Integer.parseInt(questionleft.get(ind));
@@ -223,7 +223,7 @@ public class Redirect extends ActionBarActivity {
                 finish();
             }
         }
-        else if(getcode.equals(inputcode) && currlevel >= 5 && currlevel <9) {
+        else if(getcode.equals(inputcode) && currlevel >= 6 && currlevel <12) {
             for (int i = 7; i <= 12; i++) {
                 Boolean temp = sharedPreferences.getBoolean(Integer.toString(i), false);
                 if (temp == false)
@@ -284,7 +284,7 @@ public class Redirect extends ActionBarActivity {
                 finish();
             }
         }
-        else if(currlevel == 9 && getcode.equals(inputcode)){
+        else if(currlevel == 12 && getcode.equals(inputcode)){
             Intent intent;
             intent = new Intent(Redirect.this, Question13.class);
             currlevel = currlevel + 1;

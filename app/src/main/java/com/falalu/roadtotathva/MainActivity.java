@@ -113,7 +113,7 @@ public class MainActivity extends ActionBarActivity {
                 int currlevel = sharedPreferences.getInt("levelcurr", 0);
                 if (currlevel == 0) {
                     Intent intent = new Intent(MainActivity.this, Redirect.class);
-                    intent.putExtra("admincode", "10100");
+                    intent.putExtra("admincode", "10101");
                     startActivity(intent);
                     finish();
                 } else {

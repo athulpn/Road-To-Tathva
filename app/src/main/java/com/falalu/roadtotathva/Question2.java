@@ -77,7 +77,7 @@ public class Question2 extends ActionBarActivity {
 
     public void checkAnswer(View view){
         String answer = answer1.getText().toString().toLowerCase();
-        if( answer.equals("blitzkrieg")){
+        if( answer.equals("obscura")){
             Toast.makeText(this, "Correct Answer!!!",Toast.LENGTH_SHORT).show();
             SharedPreferences sharedPreferences = getSharedPreferences("level", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -150,10 +150,9 @@ public class Question2 extends ActionBarActivity {
 
     public  void nextques(View view){
         Intent intent = new Intent(this , Redirect.class);
-        if(currlevel + 1 < 10)
+        if(currlevel + 1 < 14)
             intent.putExtra("admincode","30"+Integer.toString(currlevel+1)+Integer.toString(currlevel)+"0");
-        else
-            intent.putExtra("admincode", "3" + Integer.toString(currlevel+1) + Integer.toString(currlevel) + "0");
+
         startActivity(intent);
         finish();
     }

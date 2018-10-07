@@ -86,24 +86,24 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/popupphoto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/popupphoto"
-                    android:src="@mipmap/nlhc"
                     android:layout_marginTop="20dp"
-                    android:visibility="visible"
-                    android:background="@drawable/customborder"/>
+                    android:background="@drawable/customborder"
+                    android:src="@mipmap/audi"
+                    android:visibility="visible" />
 
                 <Button
+                    android:id="@+id/popupbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/next"
-                    android:id="@+id/popupbutton"
                     android:layout_below="@+id/popupphoto"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:onClick="nextques" />
+                    android:onClick="nextques"
+                    android:text="@string/next" />
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

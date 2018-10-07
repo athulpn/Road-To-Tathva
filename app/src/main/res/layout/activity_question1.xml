@@ -8,15 +8,15 @@
     tools:context="com.falalu.roadtotathva.Question1">
 
     <ImageView
+        android:id="@+id/question1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/question1"
-        android:gravity="center"
-        android:src="@drawable/aavishkar1"
-        android:layout_marginTop="-200dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-200dp"
+        android:gravity="center"
+        android:src="@drawable/debug" />
 
 
     <EditText
@@ -88,26 +88,25 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/popupphoto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/popupphoto"
-                    android:src="@mipmap/aavishkaar"
                     android:layout_marginTop="20dp"
-                    android:visibility="visible"
-                    android:background="@drawable/customborder"/>
+                    android:background="@drawable/customborder"
+                    android:src="@mipmap/debugger"
+                    android:visibility="visible" />
 
 
                 <TextView
+                    android:id="@+id/popuptext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:gravity="center"
-                    android:text="Social initiative of Tathva ,the annual techno\-management fest of National Institute of Technology, Calicut, in association with the Social Engineering Forum"
-                    android:layout_centerHorizontal="true"
                     android:layout_below="@+id/popupphoto"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/popuptext" />
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

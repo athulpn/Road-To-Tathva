@@ -86,26 +86,26 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/popupphoto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/popupphoto"
-                    android:src="@mipmap/samasya"
                     android:layout_marginTop="20dp"
-                    android:visibility="visible"
-                    android:background="@drawable/customborder"/>
+                    android:background="@drawable/customborder"
+                    android:src="@mipmap/eclectic"
+                    android:visibility="visible" />
 
 
                 <TextView
+                    android:id="@+id/popuptext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:gravity="center"
-                    android:text="South India\s largest quiz competition!!!"
-                    android:layout_centerHorizontal="true"
                     android:layout_below="@+id/popupphoto"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/popuptext" />
+                    android:gravity="center"
+                    android:text="Furniture design competition"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

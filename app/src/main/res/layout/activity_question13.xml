@@ -96,14 +96,14 @@
                     android:background="@drawable/customborder"/>
 
                 <Button
+                    android:id="@+id/popupbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/next"
-                    android:id="@+id/popupbutton"
                     android:layout_below="@+id/popupphoto"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:onClick="nextques" />
+                    android:onClick="nextques"
+                    android:text="@string/next" />
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>
